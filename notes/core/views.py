@@ -1,10 +1,13 @@
 from django.shortcuts import render
+
+from data import NOTES
 from django.http import HttpResponse
 
 
-# Create your views here.
 def index(request):
-    return HttpResponse("Hello World!!!! Again")
+    return HttpResponse("Hello world")
+
 
 def notes_list(request):
-    return HttpResponse("Notes List")
+    # notes_list = NOTES
+    return render(request, 'base.html', context={'notes_list': NOTES})

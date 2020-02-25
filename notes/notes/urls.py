@@ -26,6 +26,7 @@ urlpatterns = [
     path('notes_list/', views.notes_list, name='notes_list')
 ]
 
+
 if settings.DEBUG:
     import debug_toolbar
     urlpatterns = [

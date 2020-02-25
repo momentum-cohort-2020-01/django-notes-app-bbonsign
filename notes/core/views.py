@@ -9,5 +9,4 @@ def index(request):
 
 
 def notes_list(request):
-    # notes_list = NOTES
-    return render(request, 'base.html', context={'notes_list': NOTES})
+    return render(request, 'base.html', context={'notes': NOTES})

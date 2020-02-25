@@ -17,6 +17,14 @@ NOTES = {
     "title": "Down-sized system-worthy extranet",
     "body": """Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
 
+    ```python
+    def f(x):
+        return x**2
+
+    if x==2:
+        print(f(x))
+    ```
+
     - Morbi porttitor lorem id ligula.
     - Suspendisse ornare consequat lectus.
     - In est risus, auctor sed, tristique in, tempus sit amet, sem.

@@ -1,7 +1,7 @@
 from django.shortcuts import render
-
-from data import NOTES
 from django.http import HttpResponse
+
+from .models import Note
 
 
 def index(request):
@@ -9,4 +9,10 @@ def index(request):
 
 
 def notes_list(request):
-    return render(request, 'base.html', context={'notes': NOTES})
+    notes = Note.objects.all()
+    return render(request, 'core/note_list.html', context={'notes': notes})
+
+
+def note_detail(request, id):
+    note = Note.objects.get(id=id)
+    return render(request, 'core/note_detail.html', context={'id': id, 'note': note})

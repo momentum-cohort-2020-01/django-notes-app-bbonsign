@@ -1,14 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <ul>
-        {% for note in notes.values %}
-        <li>
-            <a href="{% url 'note-detail' note.id %}">
-                <h2>{{ note.title }}</h2>
-                <div>{{ note.body }}</div>
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
+<ul>
+    {% for note in notes %}
+    <hr>
+    <li>
+        <a href="{% url 'note_detail' note.pk %}">
+            <h2>{{ note.title }}</h2>
+            <div>{{ note.body | truncatewords:20 }}</div>
+        </a>
+        <a href="{% url 'edit_note' note.pk %}">
+            <button class="button-sm button-info">Edit note</button>
+        </a>
+    </li>
+    {% endfor %}
+</ul>
 {% endblock content %}

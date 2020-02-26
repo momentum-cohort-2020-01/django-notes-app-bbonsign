@@ -4,4 +4,7 @@
 <h2>{{ note.title }}</h2>
 <div>{{ note.created_at }}</div>
 <div>{{ note.body }}</div>
+<a href="{% url 'edit_note' note.pk %}">
+    <button class="button-sm button-info">Edit note</button>
+</a>
 {% endblock content %}

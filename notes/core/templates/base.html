@@ -7,12 +7,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta.25/shoelace.css">
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        h1 {
+            display: flex;
+            flex-flow: column nowrap;
+            margin: 1rem 0;
+            justify-content: center;
+            align-items: center;
+        }
+        .home-link {
+            color: black;
+        }
+
+        button {
+            margin: 0 1rem;
+        }
+    </style>
     <title>Notes App</title>
 </head>
 
 <body>
+    <h1><a href="{% url 'note_list' %}" class='home-link'>Notes!</a>
+        <a href="{% url 'new_note_form' %}">
+            <button class="button">
+                Click here to create a new note
+            </button>
+        </a>
+    </h1>
 
-    <h1>Notes!</h1>
 
     {% block content %}
 

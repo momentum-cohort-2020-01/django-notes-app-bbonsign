@@ -7,4 +7,7 @@
 <a href="{% url 'edit_note' note.pk %}">
     <button class="button-sm button-info">Edit note</button>
 </a>
+<a href="{% url 'delete_note' note.pk %}">
+    <button class="button-sm button-danger">Delete note</button>
+</a>
 {% endblock content %}

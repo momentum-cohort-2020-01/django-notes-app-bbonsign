@@ -30,7 +30,7 @@ def new_note(request):
     else:
         form = NewNoteForm()
         context = {'form': form}
-        return render(request, 'core/new_note_form.html', context=context)
+        return render(request, 'core/note_form.html', context=context)
 
 
 def edit_note(request, id):
@@ -43,4 +43,10 @@ def edit_note(request, id):
     else:
         form = NewNoteForm(instance=note)
         context = {'id': id, 'form': form}
-        return render(request, 'core/edit_note.html', context=context)
+        return render(request, 'core/note_form.html', context=context)
+
+
+def delete_note(request, id):
+    note = get_object_or_404(Note, pk=id)
+    note.delete()
+    return redirect('/')

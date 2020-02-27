@@ -17,7 +17,7 @@ def note_list(request):
 
 def note_detail(request, pk):
     note = Note.objects.get(id=pk)
-    context = {'id': pk, 'note': note}
+    context = { 'note': note}
     return render(request, 'core/note_detail.html', context=context)
 
 

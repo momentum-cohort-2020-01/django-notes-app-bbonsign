@@ -10,6 +10,7 @@ prospector = "*"
 django = "*"
 django-debug-toolbar = "*"
 markdown = "*"
+django-extensions = "*"
 ipython = "*"
 
 [requires]

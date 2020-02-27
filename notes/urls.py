@@ -24,10 +24,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', views.index, name='index'),
     path('', views.note_list, name='note_list'),
-    path('note/<int:id>', views.note_detail, name='note_detail'),
+    path('note/<int:pk>', views.note_detail, name='note_detail'),
     path('new_note', views.new_note, name='new_note_form'),
-    path('note/<int:id>/edit', views.edit_note, name='edit_note'),
-    path('note/<int:id>/delete', views.delete_note, name='delete_note'),
+    path('note/<int:pk>/edit', views.edit_note, name='edit_note'),
+    path('note/<int:pk>/delete', views.delete_note, name='delete_note'),
 ]
 
 
